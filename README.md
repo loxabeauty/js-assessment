@@ -2,14 +2,14 @@
 
 ## Guidelines
 
-+ Fork this repository
+Fork this repository.
 
-+ Create a log.txt file that includes the following information:
-    Start Time: <unix timestamp>
+Create a log.txt file that includes the following information:
+    Start Time: [unix timestamp]
+    
+    This should be your first commit.
 
-This should be your first commit.
-
-+ Please take no longer than 48 hours from first commit unless otherwise requested.
+Please take no longer than 48 hours from first commit unless otherwise requested.
 
 You will need to install [Node](https://nodejs.org/). Note that on Windows, there are some reports that you will need to restart
 after installing Node - refer to NodeJS documentation for further details.
