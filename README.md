@@ -42,4 +42,4 @@ the `data` directory; you can access it at `/data/<filename>.json`.
 
 ### Project Submission
 
-Submit a pull request and notify us of the same via email.
+Submit a pull request with your first name in the title. Notify us regarding your pull request submission via email.
