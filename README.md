@@ -1,6 +1,15 @@
 # Loxa Beauty: JS Assessment
 
-To get started, fork this repository.
+## Guidelines
+
++ Fork this repository
+
++ Create a log.txt file that includes the following information:
+    Start Time: <unix timestamp>
+
+This should be your first commit.
+
++ Please take no longer than 48 hours from first commit unless otherwise requested.
 
 You will need to install [Node](https://nodejs.org/). Note that on Windows, there are some reports that you will need to restart
 after installing Node - refer to NodeJS documentation for further details.
@@ -23,8 +32,6 @@ You can also run (most of) the tests on the command line:
 
     npm test
 
-### Available dependencies
-
 This project includes jQuery and Underscore. You can use these
 libraries when writing your solutions.
 
@@ -34,4 +41,5 @@ If your tests need data that can be fetched via XHR, add a `.json` file in
 the `data` directory; you can access it at `/data/<filename>.json`.
 
 ### Project Submission
-Submit your project's github link via email.
+
+Submit a pull request and notify us of the same via email.
