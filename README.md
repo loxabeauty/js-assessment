@@ -1,4 +1,4 @@
-# Loxa Beauty: JS Interview Assignment
+# Loxa Beauty: JS Assessment
 
 To get started, you will need to install [Node](https://nodejs.org/). Note
 that on Windows, there are some reports that you will need to restart
