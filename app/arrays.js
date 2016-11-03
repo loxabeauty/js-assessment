@@ -30,7 +30,9 @@ exports.arraysAnswers = {
   },
 
   truncate: function(arr) {
-
+    arr.pop()
+    //    console.log(arr);
+    return arr;
   },
 
   prepend: function(arr, item) {
