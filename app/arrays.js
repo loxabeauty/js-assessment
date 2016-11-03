@@ -63,7 +63,11 @@ exports.arraysAnswers = {
   },
 
   square: function(arr) {
-
+    console.log(arr);
+    return arr.map(function(x){
+      console.log(x);
+      return x*x;
+    })
   },
 
   findAllOccurrences: function(arr, target) {
