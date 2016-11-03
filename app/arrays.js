@@ -10,7 +10,15 @@ exports.arraysAnswers = {
   },
 
   remove: function(arr, item) {
-
+    var sortArray = arr;
+    var result = [];
+    //    console.log(arr[item]);
+    return sortArray.sort().reduce(function(prev,curr,index){
+      if(sortArray[index] != item){
+      result.push(sortArray[index])
+    }
+    return result;
+    },{})
   },
 
   removeWithoutCopy: function(arr, item) {
