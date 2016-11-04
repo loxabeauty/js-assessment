@@ -12,12 +12,13 @@ exports.regexAnswers = {
   },
 
   endsWithVowel: function(str) {
-
+    var regex = /[aeiouAEIOU]$/;
+    console.log(str.match(regex));
+    return str.match(regex) ? true : false;
   },
 
   captureThreeNumbers: function(str) {
     var regex = /\d{3}/;
-    console.log(str.match(regex));
   //  console.log(str.match(regex));
     return str.match(regex) ? str.match(regex).toString() : false;
   },
