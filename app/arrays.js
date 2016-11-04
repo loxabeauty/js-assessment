@@ -22,7 +22,15 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function(arr, item) {
-
+//    console.log(arr);
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] == item) {
+        console.log(arr[i]);
+        arr.splice(i, i + 1);
+      }
+    }
+    return arr;
+    console.log(arr);
   },
 
   append: function(arr, item) {
@@ -63,9 +71,9 @@ exports.arraysAnswers = {
   },
 
   square: function(arr) {
-    console.log(arr);
+//    console.log(arr);
     return arr.map(function(x){
-      console.log(x);
+//      console.log(x);
       return x*x;
     })
   },
