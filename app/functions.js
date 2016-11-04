@@ -17,6 +17,7 @@ exports.functionsAnswers = {
 
   makeClosures: function(arr, fn) {
     // console.log(arr);
+
   },
 
   partial: function(fn, str1, str2) {
@@ -24,8 +25,9 @@ exports.functionsAnswers = {
   },
 
   useArguments: function(arg) {
-    // console.log(arg);
-    return arg;
+    return Array.from(arguments).reduce(function (x, y) {
+      return x + y;
+    });
   },
 
   callIt: function(fn) {
