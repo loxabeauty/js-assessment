@@ -31,7 +31,7 @@ exports.functionsAnswers = {
   },
 
   callIt: function(fn) {
-
+    return fn.apply(this, Array.prototype.slice.call(arguments, 1));
   },
 
   partialUsingArguments: function(fn) {
