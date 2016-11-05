@@ -17,11 +17,12 @@ exports.functionsAnswers = {
 
   makeClosures: function(arr, fn) {
     // console.log(arr);
-
   },
 
   partial: function(fn, str1, str2) {
-
+    return function(punc) {
+      return fn(str1, str2, punc);
+    }
   },
 
   useArguments: function(arg) {
@@ -39,6 +40,6 @@ exports.functionsAnswers = {
   },
 
   curryIt: function(fn) {
-
+    return fn.apply(this, Array.prototype.slice.call(arguments, 1));
   }
 };
