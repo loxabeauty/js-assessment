@@ -74,17 +74,41 @@ exports.arraysAnswers = {
 
   duplicates: function(arr) {
 
+    var dupes = [];
+    var finalArray = [];
+    var dupesPosition = 1;
+    var position = 1;
+    var sorted = arr.sort();
+
+    for (var i = 0; i < sorted.length; i++) {
+      if (sorted[i] === sorted[dupesPosition]) {
+        dupes.push(arr[dupesPosition]);
+      }
+      dupesPosition++;
+    }
+
+    for (var i = 0; i < dupes.length; i++) {
+      if (dupes[i] === dupes[position]) {
+        dupes.splice(i,1);
+      }
+      position++;
+    }
+    return dupes;
   },
 
   square: function(arr) {
-//    console.log(arr);
     return arr.map(function(x){
-//      console.log(x);
       return x*x;
     })
   },
 
   findAllOccurrences: function(arr, target) {
-
+    var count = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        count.push(i)
+      }
+    }
+    return count;
   }
 };
