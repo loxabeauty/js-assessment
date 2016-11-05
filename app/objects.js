@@ -11,6 +11,6 @@ exports.objectsAnswers = {
 
   iterate: function(obj) {
     console.log(obj);
-    return obj.filter()
+    return obj.filter();
   }
 };
