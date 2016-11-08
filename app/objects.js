@@ -10,11 +10,11 @@ exports.objectsAnswers = {
   },
 
   iterate: function(obj) {
-	var ret = [];
-	var keys = Object.keys(obj);
+	var ans = [];
+	var keys = Object.keys(obj);	//returns an array of a given object's own enumerable properties
 	for (var i = 0; i < keys.length; i++) {
-		ret.push(keys[i] + ': ' + obj[keys[i]]);	
+		ans.push(keys[i] + ': ' + obj[keys[i]]);	
 	}
-	 return ret;
+	 return ans;
   }
 };
