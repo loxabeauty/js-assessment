@@ -6,7 +6,7 @@ exports.countAnswers = {
 	function run() {
 		console.log(start++);
 		if (start <= end) {
-			timeout = setTimeout(run, 100);
+			timeout = setTimeout(run, 100);		//timeout arg is a minimum number of ms to wait before executing
 		}
 	}
 	run();
