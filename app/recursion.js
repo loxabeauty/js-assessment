@@ -2,22 +2,37 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.recursionAnswers = {
   listFiles: function(data, dirName) {
-	var listOfFiles = [];
-	var dirs = [];
-	processDir(data);
-	function processDir(dir) {
-		var files = dir.files;
-		dirs.push(dir.dir);
-		for (var i = 0; i < files.length; i++) {
-			file = files[i];
-			 if (typeof file === 'string') {
-				 if (!dirName || dirs.indexOf(dirName) > -1) {
-				 }
-			 }
-			 dirs.pop();
-		}
-		return listOfFiles;
-		
+	  if(dirName === undefined){
+		  // We want tto return all the files, without the directories
+		  var files = [];
+		  for(var i = 0;i< data.files.length; i++){
+			  if(typeof data.files[i] =='string'){
+				  // the current item is a file
+				  files.push(data.files[i]);
+			  }
+			  else{
+				  // this is a folder, gotta go in
+				  var a = recursionAnswers.listFiles(data.files[i]);
+				  files = files.concat(a)
+			  }
+		  }
+		  return files;//end of the program, should return the final array
+	  }
+	  else{
+		  // we want to return all the files within a specific directory
+		  var files = [];
+		  for(var i = 0;i< data.files.length; i++){
+			  if(typeof data.files[i] !='string'){
+				  // finding the right subdir
+				  if(data.files[i].dir == dirName){
+					  files = files.concat(recursionAnswers.listFiles(data.files[i]));
+				  }
+			  }
+			  
+		  }
+		  return files;//end of the program, should return the final array
+	  }
+	
   },
 
   permute: function(arr) {
@@ -46,32 +61,7 @@ exports.recursionAnswers = {
   },
 
   fibonacci: function(n) {
-/*	var x = document.f1.n1.value;
-  if (getLucas) {
-      alert(n(x));
-  }
-  else {
-      alert(fib(x));
-  }
-}
 
-function fib(a) {
-  if (a < 2) {
-      return n;
-  }
-  else {
-      return fib(a - 1) + fib(a - 2);
-  }
-}
-
-function n(a) {
-  if (a < 2) {
-      return 2-a;
-  }
-  else {
-      return n(a - 1) + n(a - 2);
-  } */
-  
   function fib(n) {
        return n < 2 ? n : fib(n - 1) + fib(n - 2);
      }
